@@ -1,0 +1,570 @@
+"day";"y";"yprev";"n"
+0;"Non-ICU ward";NA;386
+0;"ICU";NA;7
+1;"Non-ICU ward";"Non-ICU ward";284
+1;"Non-ICU ward";"ICU";1
+1;"ICU";"Non-ICU ward";102
+1;"ICU";"ICU";6
+2;"Non-ICU ward";"Non-ICU ward";281
+2;"Non-ICU ward";"ICU";42
+2;"ICU";"Non-ICU ward";4
+2;"ICU";"ICU";66
+3;"Non-ICU ward";"Non-ICU ward";300
+3;"Non-ICU ward";"ICU";17
+3;"ICU";"Non-ICU ward";23
+3;"ICU";"ICU";52
+3;"Dead";"ICU";1
+4;"Non-ICU ward";"Non-ICU ward";314
+4;"Non-ICU ward";"ICU";23
+4;"ICU";"Non-ICU ward";3
+4;"ICU";"ICU";52
+4;"Dead";"Dead";1
+5;"Non-ICU ward";"Non-ICU ward";332
+5;"Non-ICU ward";"ICU";17
+5;"ICU";"Non-ICU ward";5
+5;"ICU";"ICU";38
+5;"Dead";"Dead";1
+6;"Discharged";"Non-ICU ward";3
+6;"Non-ICU ward";"Non-ICU ward";341
+6;"Non-ICU ward";"ICU";10
+6;"ICU";"Non-ICU ward";5
+6;"ICU";"ICU";33
+6;"Dead";"Dead";1
+7;"Discharged";"Discharged";3
+7;"Discharged";"Non-ICU ward";5
+7;"Non-ICU ward";"Non-ICU ward";345
+7;"Non-ICU ward";"ICU";5
+7;"ICU";"Non-ICU ward";1
+7;"ICU";"ICU";32
+7;"Dead";"ICU";1
+7;"Dead";"Dead";1
+8;"Discharged";"Discharged";8
+8;"Discharged";"Non-ICU ward";9
+8;"Non-ICU ward";"Non-ICU ward";337
+8;"Non-ICU ward";"ICU";5
+8;"ICU";"Non-ICU ward";4
+8;"ICU";"ICU";28
+8;"Dead";"Dead";2
+9;"Discharged";"Discharged";17
+9;"Discharged";"Non-ICU ward";19
+9;"Non-ICU ward";"Non-ICU ward";318
+9;"Non-ICU ward";"ICU";6
+9;"ICU";"Non-ICU ward";5
+9;"ICU";"ICU";26
+9;"Dead";"Dead";2
+10;"Discharged";"Discharged";35
+10;"Discharged";"Non-ICU ward";13
+10;"Non-ICU ward";"Discharged";1
+10;"Non-ICU ward";"Non-ICU ward";306
+10;"Non-ICU ward";"ICU";5
+10;"ICU";"Non-ICU ward";5
+10;"ICU";"ICU";25
+10;"Dead";"ICU";1
+10;"Dead";"Dead";2
+11;"Discharged";"Discharged";47
+11;"Discharged";"Non-ICU ward";20
+11;"Non-ICU ward";"Discharged";1
+11;"Non-ICU ward";"Non-ICU ward";291
+11;"Non-ICU ward";"ICU";7
+11;"ICU";"Non-ICU ward";1
+11;"ICU";"ICU";23
+11;"Dead";"Dead";3
+12;"Discharged";"Discharged";66
+12;"Discharged";"Non-ICU ward";12
+12;"Non-ICU ward";"Discharged";1
+12;"Non-ICU ward";"Non-ICU ward";282
+12;"Non-ICU ward";"ICU";2
+12;"ICU";"Non-ICU ward";3
+12;"ICU";"ICU";22
+12;"Dead";"Non-ICU ward";2
+12;"Dead";"Dead";3
+13;"Discharged";"Discharged";75
+13;"Discharged";"Non-ICU ward";11
+13;"Non-ICU ward";"Discharged";3
+13;"Non-ICU ward";"Non-ICU ward";270
+13;"Non-ICU ward";"ICU";4
+13;"ICU";"Non-ICU ward";4
+13;"ICU";"ICU";21
+13;"Dead";"Dead";5
+14;"Discharged";"Discharged";82
+14;"Discharged";"Non-ICU ward";17
+14;"Non-ICU ward";"Discharged";4
+14;"Non-ICU ward";"Non-ICU ward";258
+14;"Non-ICU ward";"ICU";4
+14;"ICU";"Non-ICU ward";2
+14;"ICU";"ICU";20
+14;"Dead";"ICU";1
+14;"Dead";"Dead";5
+15;"Discharged";"Discharged";98
+15;"Discharged";"Non-ICU ward";21
+15;"Non-ICU ward";"Discharged";1
+15;"Non-ICU ward";"Non-ICU ward";241
+15;"Non-ICU ward";"ICU";8
+15;"ICU";"Non-ICU ward";3
+15;"ICU";"ICU";14
+15;"Dead";"Non-ICU ward";1
+15;"Dead";"Dead";6
+16;"Discharged";"Discharged";116
+16;"Discharged";"Non-ICU ward";28
+16;"Non-ICU ward";"Discharged";3
+16;"Non-ICU ward";"Non-ICU ward";221
+16;"Non-ICU ward";"ICU";4
+16;"ICU";"Non-ICU ward";1
+16;"ICU";"ICU";13
+16;"Dead";"Dead";7
+17;"Discharged";"Discharged";140
+17;"Discharged";"Non-ICU ward";19
+17;"Non-ICU ward";"Discharged";4
+17;"Non-ICU ward";"Non-ICU ward";207
+17;"Non-ICU ward";"ICU";1
+17;"ICU";"Non-ICU ward";2
+17;"ICU";"ICU";12
+17;"Dead";"ICU";1
+17;"Dead";"Dead";7
+18;"Discharged";"Discharged";158
+18;"Discharged";"Non-ICU ward";21
+18;"Non-ICU ward";"Discharged";1
+18;"Non-ICU ward";"Non-ICU ward";188
+18;"Non-ICU ward";"ICU";4
+18;"ICU";"Non-ICU ward";3
+18;"ICU";"ICU";10
+18;"Dead";"Dead";8
+19;"Discharged";"Discharged";176
+19;"Discharged";"Non-ICU ward";11
+19;"Non-ICU ward";"Discharged";3
+19;"Non-ICU ward";"Non-ICU ward";181
+19;"Non-ICU ward";"ICU";2
+19;"ICU";"Non-ICU ward";1
+19;"ICU";"ICU";11
+19;"Dead";"Dead";8
+20;"Discharged";"Discharged";186
+20;"Discharged";"Non-ICU ward";15
+20;"Non-ICU ward";"Discharged";1
+20;"Non-ICU ward";"Non-ICU ward";169
+20;"Non-ICU ward";"ICU";1
+20;"ICU";"Non-ICU ward";2
+20;"ICU";"ICU";11
+20;"Dead";"Dead";8
+21;"Discharged";"Discharged";195
+21;"Discharged";"Non-ICU ward";11
+21;"Non-ICU ward";"Discharged";6
+21;"Non-ICU ward";"Non-ICU ward";160
+21;"Non-ICU ward";"ICU";2
+21;"ICU";"ICU";11
+21;"Dead";"Dead";8
+22;"Discharged";"Discharged";201
+22;"Discharged";"Non-ICU ward";18
+22;"Non-ICU ward";"Discharged";5
+22;"Non-ICU ward";"Non-ICU ward";149
+22;"Non-ICU ward";"ICU";2
+22;"ICU";"Non-ICU ward";1
+22;"ICU";"ICU";9
+22;"Dead";"Dead";8
+23;"Discharged";"Discharged";217
+23;"Discharged";"Non-ICU ward";16
+23;"Non-ICU ward";"Discharged";2
+23;"Non-ICU ward";"Non-ICU ward";139
+23;"ICU";"Non-ICU ward";1
+23;"ICU";"ICU";10
+23;"Dead";"Dead";8
+24;"Discharged";"Discharged";232
+24;"Discharged";"Non-ICU ward";13
+24;"Non-ICU ward";"Discharged";1
+24;"Non-ICU ward";"Non-ICU ward";128
+24;"Non-ICU ward";"ICU";1
+24;"ICU";"ICU";9
+24;"Dead";"ICU";1
+24;"Dead";"Dead";8
+25;"Discharged";"Discharged";244
+25;"Discharged";"Non-ICU ward";10
+25;"Non-ICU ward";"Discharged";1
+25;"Non-ICU ward";"Non-ICU ward";120
+25;"Non-ICU ward";"ICU";1
+25;"ICU";"ICU";7
+25;"Dead";"ICU";1
+25;"Dead";"Dead";9
+26;"Discharged";"Discharged";254
+26;"Discharged";"Non-ICU ward";11
+26;"Non-ICU ward";"Non-ICU ward";111
+26;"ICU";"ICU";7
+26;"Dead";"Dead";10
+27;"Discharged";"Discharged";265
+27;"Discharged";"Non-ICU ward";3
+27;"Non-ICU ward";"Non-ICU ward";107
+27;"Non-ICU ward";"ICU";1
+27;"ICU";"Non-ICU ward";1
+27;"ICU";"ICU";6
+27;"Dead";"Dead";10
+28;"Discharged";"Discharged";263
+28;"Discharged";"Non-ICU ward";7
+28;"Non-ICU ward";"Discharged";5
+28;"Non-ICU ward";"Non-ICU ward";100
+28;"ICU";"Non-ICU ward";1
+28;"ICU";"ICU";7
+28;"Dead";"Dead";10
+29;"Discharged";"Discharged";268
+29;"Discharged";"Non-ICU ward";8
+29;"Non-ICU ward";"Discharged";1
+29;"Non-ICU ward";"Non-ICU ward";97
+29;"ICU";"Discharged";1
+29;"ICU";"ICU";8
+29;"Dead";"Dead";10
+30;"Discharged";"Discharged";274
+30;"Discharged";"Non-ICU ward";12
+30;"Non-ICU ward";"Discharged";2
+30;"Non-ICU ward";"Non-ICU ward";86
+30;"ICU";"ICU";9
+30;"Dead";"Dead";10
+31;"Discharged";"Discharged";283
+31;"Discharged";"Non-ICU ward";6
+31;"Non-ICU ward";"Discharged";3
+31;"Non-ICU ward";"Non-ICU ward";82
+31;"Non-ICU ward";"ICU";1
+31;"ICU";"ICU";7
+31;"Dead";"ICU";1
+31;"Dead";"Dead";10
+32;"Discharged";"Discharged";285
+32;"Discharged";"Non-ICU ward";5
+32;"Non-ICU ward";"Discharged";4
+32;"Non-ICU ward";"Non-ICU ward";81
+32;"Non-ICU ward";"ICU";1
+32;"ICU";"ICU";5
+32;"Dead";"ICU";1
+32;"Dead";"Dead";11
+33;"Discharged";"Discharged";284
+33;"Discharged";"Non-ICU ward";4
+33;"Non-ICU ward";"Discharged";6
+33;"Non-ICU ward";"Non-ICU ward";81
+33;"Non-ICU ward";"ICU";1
+33;"ICU";"Non-ICU ward";1
+33;"ICU";"ICU";4
+33;"Dead";"Dead";12
+34;"Discharged";"Discharged";285
+34;"Discharged";"Non-ICU ward";2
+34;"Non-ICU ward";"Discharged";3
+34;"Non-ICU ward";"Non-ICU ward";86
+34;"ICU";"ICU";5
+34;"Dead";"Dead";12
+35;"Discharged";"Discharged";284
+35;"Discharged";"Non-ICU ward";8
+35;"Non-ICU ward";"Discharged";3
+35;"Non-ICU ward";"Non-ICU ward";81
+35;"ICU";"ICU";5
+35;"Dead";"Dead";12
+36;"Discharged";"Discharged";290
+36;"Discharged";"Non-ICU ward";11
+36;"Non-ICU ward";"Discharged";1
+36;"Non-ICU ward";"Non-ICU ward";72
+36;"ICU";"Non-ICU ward";1
+36;"ICU";"ICU";5
+36;"Dead";"Discharged";1
+36;"Dead";"Dead";12
+37;"Discharged";"Discharged";299
+37;"Discharged";"Non-ICU ward";8
+37;"Non-ICU ward";"Discharged";2
+37;"Non-ICU ward";"Non-ICU ward";65
+37;"Non-ICU ward";"ICU";1
+37;"ICU";"ICU";5
+37;"Dead";"Dead";13
+38;"Discharged";"Discharged";307
+38;"Discharged";"Non-ICU ward";6
+38;"Non-ICU ward";"Non-ICU ward";62
+38;"Non-ICU ward";"ICU";1
+38;"ICU";"ICU";4
+38;"Dead";"Dead";13
+39;"Discharged";"Discharged";310
+39;"Discharged";"Non-ICU ward";7
+39;"Non-ICU ward";"Discharged";3
+39;"Non-ICU ward";"Non-ICU ward";55
+39;"ICU";"Non-ICU ward";1
+39;"ICU";"ICU";4
+39;"Dead";"Dead";13
+40;"Discharged";"Discharged";315
+40;"Discharged";"Non-ICU ward";5
+40;"Non-ICU ward";"Discharged";2
+40;"Non-ICU ward";"Non-ICU ward";53
+40;"ICU";"ICU";5
+40;"Dead";"Dead";13
+41;"Discharged";"Discharged";317
+41;"Discharged";"Non-ICU ward";4
+41;"Non-ICU ward";"Discharged";2
+41;"Non-ICU ward";"Non-ICU ward";51
+41;"ICU";"Discharged";1
+41;"ICU";"ICU";5
+41;"Dead";"Dead";13
+42;"Discharged";"Discharged";319
+42;"Discharged";"Non-ICU ward";2
+42;"Non-ICU ward";"Discharged";2
+42;"Non-ICU ward";"Non-ICU ward";50
+42;"ICU";"Non-ICU ward";1
+42;"ICU";"ICU";6
+42;"Dead";"Dead";13
+43;"Discharged";"Discharged";317
+43;"Discharged";"Non-ICU ward";4
+43;"Non-ICU ward";"Discharged";4
+43;"Non-ICU ward";"Non-ICU ward";48
+43;"Non-ICU ward";"ICU";2
+43;"ICU";"ICU";5
+43;"Dead";"Dead";13
+44;"Discharged";"Discharged";320
+44;"Discharged";"Non-ICU ward";6
+44;"Non-ICU ward";"Discharged";1
+44;"Non-ICU ward";"Non-ICU ward";47
+44;"ICU";"Non-ICU ward";1
+44;"ICU";"ICU";5
+44;"Dead";"Dead";13
+45;"Discharged";"Discharged";325
+45;"Discharged";"Non-ICU ward";7
+45;"Non-ICU ward";"Discharged";1
+45;"Non-ICU ward";"Non-ICU ward";41
+45;"Non-ICU ward";"ICU";1
+45;"ICU";"ICU";5
+45;"Dead";"Dead";13
+46;"Discharged";"Discharged";331
+46;"Discharged";"Non-ICU ward";4
+46;"Non-ICU ward";"Discharged";1
+46;"Non-ICU ward";"Non-ICU ward";39
+46;"Non-ICU ward";"ICU";1
+46;"ICU";"ICU";4
+46;"Dead";"Dead";13
+47;"Discharged";"Discharged";335
+47;"Non-ICU ward";"Non-ICU ward";41
+47;"Non-ICU ward";"ICU";1
+47;"ICU";"ICU";3
+47;"Dead";"Dead";13
+48;"Discharged";"Discharged";334
+48;"Discharged";"Non-ICU ward";1
+48;"Non-ICU ward";"Discharged";1
+48;"Non-ICU ward";"Non-ICU ward";41
+48;"ICU";"ICU";3
+48;"Dead";"Dead";13
+49;"Discharged";"Discharged";335
+49;"Discharged";"Non-ICU ward";2
+49;"Non-ICU ward";"Non-ICU ward";39
+49;"ICU";"Non-ICU ward";1
+49;"ICU";"ICU";3
+49;"Dead";"Dead";13
+50;"Discharged";"Discharged";336
+50;"Discharged";"Non-ICU ward";5
+50;"Non-ICU ward";"Discharged";1
+50;"Non-ICU ward";"Non-ICU ward";34
+50;"ICU";"ICU";4
+50;"Dead";"Dead";13
+51;"Discharged";"Discharged";339
+51;"Discharged";"Non-ICU ward";1
+51;"Non-ICU ward";"Discharged";2
+51;"Non-ICU ward";"Non-ICU ward";34
+51;"ICU";"ICU";4
+51;"Dead";"Dead";13
+52;"Discharged";"Discharged";338
+52;"Discharged";"Non-ICU ward";5
+52;"Non-ICU ward";"Discharged";2
+52;"Non-ICU ward";"Non-ICU ward";31
+52;"ICU";"ICU";4
+52;"Dead";"Dead";13
+53;"Discharged";"Discharged";342
+53;"Discharged";"Non-ICU ward";1
+53;"Non-ICU ward";"Discharged";1
+53;"Non-ICU ward";"Non-ICU ward";32
+53;"ICU";"ICU";4
+53;"Dead";"Dead";13
+54;"Discharged";"Discharged";342
+54;"Non-ICU ward";"Non-ICU ward";32
+54;"ICU";"Discharged";1
+54;"ICU";"ICU";4
+54;"Dead";"Non-ICU ward";1
+54;"Dead";"Dead";13
+55;"Discharged";"Discharged";341
+55;"Discharged";"Non-ICU ward";1
+55;"Non-ICU ward";"Discharged";1
+55;"Non-ICU ward";"Non-ICU ward";31
+55;"ICU";"ICU";5
+55;"Dead";"Dead";14
+56;"Discharged";"Discharged";341
+56;"Discharged";"Non-ICU ward";2
+56;"Non-ICU ward";"Discharged";1
+56;"Non-ICU ward";"Non-ICU ward";29
+56;"Non-ICU ward";"ICU";1
+56;"ICU";"ICU";4
+56;"Dead";"Non-ICU ward";1
+56;"Dead";"Dead";14
+57;"Discharged";"Discharged";342
+57;"Discharged";"Non-ICU ward";7
+57;"Non-ICU ward";"Discharged";1
+57;"Non-ICU ward";"Non-ICU ward";24
+57;"ICU";"ICU";4
+57;"Dead";"Dead";15
+58;"Discharged";"Discharged";347
+58;"Discharged";"Non-ICU ward";1
+58;"Non-ICU ward";"Discharged";2
+58;"Non-ICU ward";"Non-ICU ward";24
+58;"ICU";"ICU";4
+58;"Dead";"Dead";15
+59;"Discharged";"Discharged";344
+59;"Discharged";"Non-ICU ward";1
+59;"Non-ICU ward";"Discharged";2
+59;"Non-ICU ward";"Non-ICU ward";25
+59;"ICU";"Discharged";1
+59;"ICU";"ICU";4
+59;"Dead";"Discharged";1
+59;"Dead";"Dead";15
+60;"Discharged";"Discharged";345
+60;"Discharged";"Non-ICU ward";1
+60;"Non-ICU ward";"Non-ICU ward";26
+60;"ICU";"ICU";5
+60;"Dead";"Dead";16
+61;"Discharged";"Discharged";345
+61;"Discharged";"Non-ICU ward";2
+61;"Non-ICU ward";"Discharged";1
+61;"Non-ICU ward";"Non-ICU ward";24
+61;"Non-ICU ward";"ICU";1
+61;"ICU";"ICU";4
+61;"Dead";"Dead";16
+62;"Discharged";"Discharged";346
+62;"Discharged";"Non-ICU ward";3
+62;"Non-ICU ward";"Discharged";1
+62;"Non-ICU ward";"Non-ICU ward";23
+62;"ICU";"ICU";4
+62;"Dead";"Dead";16
+63;"Discharged";"Discharged";348
+63;"Non-ICU ward";"Discharged";1
+63;"Non-ICU ward";"Non-ICU ward";24
+63;"Non-ICU ward";"ICU";1
+63;"ICU";"ICU";3
+63;"Dead";"Dead";16
+64;"Discharged";"Discharged";347
+64;"Discharged";"Non-ICU ward";2
+64;"Non-ICU ward";"Discharged";1
+64;"Non-ICU ward";"Non-ICU ward";24
+64;"ICU";"ICU";3
+64;"Dead";"Dead";16
+65;"Discharged";"Discharged";347
+65;"Discharged";"Non-ICU ward";3
+65;"Non-ICU ward";"Discharged";2
+65;"Non-ICU ward";"Non-ICU ward";22
+65;"ICU";"ICU";3
+65;"Dead";"Dead";16
+66;"Discharged";"Discharged";350
+66;"Discharged";"Non-ICU ward";2
+66;"Non-ICU ward";"Non-ICU ward";22
+66;"ICU";"ICU";3
+66;"Dead";"Dead";16
+67;"Discharged";"Discharged";352
+67;"Non-ICU ward";"Non-ICU ward";22
+67;"ICU";"ICU";3
+67;"Dead";"Dead";16
+68;"Discharged";"Discharged";352
+68;"Discharged";"Non-ICU ward";1
+68;"Non-ICU ward";"Non-ICU ward";21
+68;"ICU";"ICU";3
+68;"Dead";"Dead";16
+69;"Discharged";"Discharged";352
+69;"Discharged";"Non-ICU ward";2
+69;"Non-ICU ward";"Discharged";1
+69;"Non-ICU ward";"Non-ICU ward";19
+69;"ICU";"ICU";3
+69;"Dead";"Dead";16
+70;"Discharged";"Discharged";353
+70;"Discharged";"Non-ICU ward";1
+70;"Non-ICU ward";"Discharged";1
+70;"Non-ICU ward";"Non-ICU ward";19
+70;"ICU";"ICU";3
+70;"Dead";"Dead";16
+71;"Discharged";"Discharged";354
+71;"Discharged";"Non-ICU ward";3
+71;"Non-ICU ward";"Non-ICU ward";17
+71;"ICU";"ICU";3
+71;"Dead";"Dead";16
+72;"Discharged";"Discharged";357
+72;"Discharged";"Non-ICU ward";2
+72;"Non-ICU ward";"Non-ICU ward";15
+72;"ICU";"ICU";3
+72;"Dead";"Dead";16
+73;"Discharged";"Discharged";359
+73;"Non-ICU ward";"Non-ICU ward";15
+73;"ICU";"ICU";3
+73;"Dead";"Dead";16
+74;"Discharged";"Discharged";357
+74;"Discharged";"Non-ICU ward";1
+74;"Non-ICU ward";"Discharged";2
+74;"Non-ICU ward";"Non-ICU ward";14
+74;"ICU";"ICU";3
+74;"Dead";"Dead";16
+75;"Discharged";"Discharged";357
+75;"Non-ICU ward";"Discharged";1
+75;"Non-ICU ward";"Non-ICU ward";15
+75;"ICU";"Non-ICU ward";1
+75;"ICU";"ICU";3
+75;"Dead";"Dead";16
+76;"Discharged";"Discharged";357
+76;"Discharged";"Non-ICU ward";4
+76;"Non-ICU ward";"Non-ICU ward";12
+76;"ICU";"ICU";4
+76;"Dead";"Dead";16
+77;"Discharged";"Discharged";361
+77;"Discharged";"Non-ICU ward";3
+77;"Non-ICU ward";"Non-ICU ward";9
+77;"ICU";"ICU";4
+77;"Dead";"Dead";16
+78;"Discharged";"Discharged";364
+78;"Discharged";"Non-ICU ward";2
+78;"Non-ICU ward";"Non-ICU ward";7
+78;"Non-ICU ward";"ICU";1
+78;"ICU";"ICU";3
+78;"Dead";"Dead";16
+79;"Discharged";"Discharged";364
+79;"Non-ICU ward";"Discharged";2
+79;"Non-ICU ward";"Non-ICU ward";8
+79;"ICU";"ICU";3
+79;"Dead";"Dead";16
+80;"Discharged";"Discharged";363
+80;"Non-ICU ward";"Discharged";1
+80;"Non-ICU ward";"Non-ICU ward";10
+80;"ICU";"ICU";3
+80;"Dead";"Dead";16
+81;"Discharged";"Discharged";363
+81;"Discharged";"Non-ICU ward";2
+81;"Non-ICU ward";"Non-ICU ward";9
+81;"ICU";"ICU";3
+81;"Dead";"Dead";16
+82;"Discharged";"Discharged";365
+82;"Discharged";"Non-ICU ward";1
+82;"Non-ICU ward";"Non-ICU ward";8
+82;"ICU";"ICU";3
+82;"Dead";"Dead";16
+83;"Discharged";"Discharged";366
+83;"Discharged";"Non-ICU ward";1
+83;"Non-ICU ward";"Non-ICU ward";7
+83;"ICU";"ICU";3
+83;"Dead";"Dead";16
+84;"Discharged";"Discharged";365
+84;"Discharged";"Non-ICU ward";1
+84;"Non-ICU ward";"Discharged";1
+84;"Non-ICU ward";"Non-ICU ward";6
+84;"ICU";"ICU";3
+84;"Dead";"Discharged";1
+84;"Dead";"Dead";16
+85;"Discharged";"Discharged";366
+85;"Non-ICU ward";"Non-ICU ward";7
+85;"ICU";"ICU";2
+85;"Dead";"ICU";1
+85;"Dead";"Dead";17
+86;"Discharged";"Discharged";364
+86;"Non-ICU ward";"Discharged";2
+86;"Non-ICU ward";"Non-ICU ward";7
+86;"ICU";"ICU";2
+86;"Dead";"Dead";18
+87;"Discharged";"Discharged";361
+87;"Non-ICU ward";"Discharged";3
+87;"Non-ICU ward";"Non-ICU ward";9
+87;"ICU";"ICU";2
+87;"Dead";"Dead";18
+88;"Discharged";"Discharged";361
+88;"Non-ICU ward";"Non-ICU ward";12
+88;"ICU";"ICU";2
+88;"Dead";"Dead";18
+89;"Discharged";"Discharged";361
+89;"Discharged";"Non-ICU ward";2
+89;"Non-ICU ward";"Non-ICU ward";10
+89;"ICU";"ICU";2
+89;"Dead";"Dead";18

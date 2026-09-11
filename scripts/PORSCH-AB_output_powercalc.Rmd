@@ -1,0 +1,114 @@
+---
+title: "PORSCH-AB longitudinal ordinal outcome simulations"
+author: "Henri van Werkhoven"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## file used
+
+`r filename %>% str_remove("^data/")`, tab: `r tabname`.
+
+## Original data
+
+Duration of (ICU) admission and mortality were analysed from `r data_outcome_ab_drainage$id %>% unique() %>% length()` patients with acute pancreatitis that received antibiotics or underwent drainage (ab_drainage population). 
+
+The patients trajectory was analysed from day 0 up to day `r futime-1` (i.e. `r futime` days). Figure 1 shows the crude trajectory of patients. In the crude data, `r mort_crude_ab_drainage %>% filter(day==futime-1) %>% pull(N.died)` (`r sprintf("%.1f%%", (mort_crude_ab_drainage %>% filter(day==futime-1) %>% pull(Prop.died))*100)`) patients died up to day `r futime`. ICU admissions occurred in `r icu_crude_ab_drainage$N.icu.anytime` (`r sprintf("%.1f%%",icu_crude_ab_drainage$Prop.icu.anytime*100)`) patients. In these ICU-admitted patients, the mean length of ICU stay was `r sprintf("%.1f", icu_crude_ab_drainage$Mean.icu.days)` days (overall mean: `r sprintf("%.1f", icu_crude_ab_drainage$Mean.icu.days.overall)` days). Over the follow-up time, patients spend on average `r sprintf("%.1f",days_alive_crude$mean_days_home)` days alive out of the hospital. There were `r readmission_crude_ab_drainage$N.readmissions` readmissions (population mean: `r readmission_crude_ab_drainage$Mean.readmissions %>% sprintf(fmt="%.3f")`).
+
+## Modelling
+
+The data were modeled using a Semiparametric Ordinal Longitudinal Model (Markov model) which is based only on the follow-up day (using a spline) and the patients prior status. The model-predicted trajectory is shown in Figure 2. The model-predicted `r futime`-day mortality rate was `r sprintf("%.1f%%", mort_model*100)`. The model-predicted number of days alive out of the hospital was `r sprintf("%.1f",days_alive_model)`. 
+
+### Figure 1: crude state occupancy over time
+
+```{r plot_state_occupancy_crude}
+plot_state_occupancy_ab_drainage_crude
+```
+
+### Figure 2: model-predicted state occupancy over time 
+
+```{r plot_state_occupancy_model}
+plot_state_occupancy_ab_drainage_model
+```
+
+## Simulations
+
+The model predicted mortality was lower and days alive out of hospital was higher compared to the crude data. Therefore, we applied a correction for the control group on top of the model prediction. We assumed that mortality in the trial will be the same as in the crude data in the control group (ordinal Odds Ratio [OR] of `r sprintf("%.3f", LOOR.control)` compared to the model-predicted outcomes). With this correction, the mean simulated number of days alive out of the hospital was `r sprintf("%.1f",days_alive_model_corr)` in the control group. ICU admissions occurred in `r sprintf("%.1f%%", admissions_icu_model_corr * 100)` of patients in the control group of the simulated data; the average number of ICU days in the total population was simulated to be `r sprintf("%.1f", days_icu_model_corr)`. The mean number of readmissions in the simulations was `r readmissions_model_corr %>% sprintf(fmt="%.2f")` in the simulated control group.
+
+Simulations were conducted for different longitudinal ordinal odds ratios (LOOR). Table 1 shows the implications of these LOORs for different components of the outcome. A total of `r scenarios$pow_sim[[1]]$iter` simulations per scenario were performed based on this model. Figure 3 shows the distributions of outcomes for the simulated scenarios.
+
+### Table 1: effect of simulated LOORs for the components of the outcome
+
+```{r table_scenario_effect_on_components}
+scenarios %>%
+  mutate(
+    `Mortality` = sprintf("%.1f%%", (mort_int - mort_ctr)*100),
+    `Mortality RR` = sprintf("%.3f", mort_int / mort_ctr),
+    `ICU days` = sprintf("%.1f", icudays_int - icudays_ctr),
+    `Days alive discharged` = sprintf("%.1f", daooh_int - daooh_ctr)) %>%
+  distinct(LOOR, proportional, `Mortality`, `Mortality RR`, `ICU days`, `Days alive discharged`) %>%
+  rename(Proportional = proportional) %>%
+  gt() %>%
+  tab_footnote("Absolute risk difference", locations = cells_column_labels(Mortality)) %>%
+  tab_footnote("Relative risk", locations = cells_column_labels(`Mortality RR`)) %>%
+  tab_footnote("Absolute difference", locations = cells_column_labels(c(`ICU days`,`Days alive discharged`)))
+```
+
+### Figure 3: simulated state occupancy over time for all scenarios {.tabset}
+
+```{r plot_state_occupancy_simulated, results='asis'}
+for(j in 1:length(plot_state_occupancy_ab_drainage_simulated)){
+  cat("\n\n#### ", LETTERS[j], "\n\n")
+  print(plot_state_occupancy_ab_drainage_simulated[[j]])
+}
+```
+
+The simulated trials were analysed in two ways. First, we used the "number of days alive out of the hospital" as endpoint, where patients that died within `r futime` days were given a value of -1 (worst score) and other patients received a value >= 0 depending on how many days they were not hospitalized. Second, we analysed the daily status using a Semiparametric Ordinal Longitudinal Model. Note that this second model is the same that was used for simulating the trials, which may have advantaged this analysis. The power for all-cause mortality as an endpoint was also calculated based on expected mortality benefit in the simulations (Figure 4). The effective sample size of one analysis compared to other analyses was calculated between simulations of the same effect size and power. An effective sample size of 2 means that the trial with more complex analysis can be 2 times smaller to obtain the same power as the trial with less complex analysis (Table 2).
+
+### Figure 4: power for trials with different sample size and effect size and using different endpoints. The sample sizes on the x-axis are for an individually randomized trial and they are chosen to match with the sample size expected in the stepped-wedge trial given the design effect. 
+
+```{r plot_power_ab_drainage}
+plot_power_scenarios_ab_drainage
+```
+
+<!-- ### Table 2: power (data underlying in figure 4) and effective sample size for trials with different sample size and effect size and using different endpoints, for an individually randomized trial. ESS: effective sample size. ARD: absolute risk difference -->
+
+```{r table_power}
+# table_power_scenarios %>%
+#   arrange(Effect, `N per group`) %>%
+#   mutate(grp = sprintf("%s (N per group: %.0f)", Effect, `N per group`)) %>%
+#   select(-Effect, -`N per group`) %>%
+#   gt(groupname_col = 'grp')
+```
+
+## Sample sizes for the stepped-wedge trial
+
+The sample sizes provided for the simulations were back-calculated from a stepped-wedge trial with several fixed sample sizes. Sample sizes for the longitudinal ordinal outcome given this stepped-wedge trial design are provided in table 3.
+
+**_Note that a wash-in period has not been accounted for._** Introducing a wash-in will result in a somewhat reduced power, although with 4 weeks wash-in and steps of 8-10 weeks the impact will be quite limited.
+
+### Table 2: Sample sizes for stepped-wedge trial for the longitudinal ordinal outcome. 
+
+OR.mort: assumed OR for `r futime`-day mortality, see above. n_iRCT: sample size per arm for an individually randomized controlled trial. k: number of clusters. icc: intra-cluster correlation. DE: design effect of the stepped-wedge design. total_size: Total sample size needed for the stepped-wedge trial.
+
+```{r table_swcrt}
+table_sample_size_swcrt_scenarios %>%
+  mutate(
+    effectsize = sprintf("LOOR = %.3f (%s odds)", LOOR, if_else(proportional, 'proportional','non-proportional')),
+    across(starts_with('Power_'), ~ sprintf("%.1f%%", .x*100))) %>%
+  arrange(proportional, LOOR) %>%
+  select(-LOOR, -proportional) %>%
+  group_by(effectsize) %>%
+  gt() %>%
+  gt::fmt_number(c(DE, starts_with('Power_')), decimals = 3) %>%
+  gt::tab_spanner_delim('_', starts_with('Power_')) %>%
+  tab_footnote("LOOR: Longitudinal ordinal odds ratio") %>%
+  tab_footnote("Design effect", cells_column_labels('DE')) %>%
+  tab_footnote("Total number of patients, not including a wash-in", cells_column_labels('N')) %>%
+  tab_footnote("Calculated using all simulations with the same LOOR (i.e. extrapolated)", cells_column_spanners())
+```
+

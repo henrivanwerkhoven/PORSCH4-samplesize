@@ -1,0 +1,77 @@
+---
+title: "Correlations LOOR, DOOR and PORSCH outcome"
+author: "Henri van Werkhoven"
+date: "2026-07-23"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+spearman_fmt <- function(x){
+  sprintf("%.3f (%.3f to %.3f)", x[1], x[2], x[3])
+}
+```
+
+## Figure 1: scatter plot of mean LOOR outcome vs. DOOR outcome or components {.tabset}
+
+Spearman correlations provided below each plot.
+
+### A. DOOR
+
+```{r}
+plot_mean_loor_vs_door
+```
+
+Spearman correlation (95% CI): `r spearman_fmt(spearman_mean_loor_vs_door)`.
+
+### B. PORSCH
+
+```{r}
+plot_mean_loor_vs_porsch
+```
+
+Spearman correlation (95% CI): `r spearman_fmt(spearman_mean_loor_vs_porsch)`.
+
+### C. Organ failure
+
+```{r}
+plot_mean_loor_vs_OFD
+```
+
+Spearman correlation (95% CI): `r spearman_fmt(spearman_mean_loor_vs_OFD)`.
+
+### D. Death
+
+```{r}
+plot_mean_loor_vs_death
+```
+
+Spearman correlation (95% CI): `r spearman_fmt(spearman_mean_loor_vs_death)`.
+
+## Figure 2: Transition probabilities by DOOR rank {.tabset}
+
+```{r, results='asis'}
+for(j in 1:length(state_occupancy_by_door$x)){
+  cat("\n\n### ", LETTERS[j], ": Rank ", state_occupancy_by_door$door[j], "\n\n")
+  print(state_occupancy_by_door$x[[j]])
+}
+```
+
+## Figure 3: Transition probabilities by PORSCH endpoint {.tabset}
+
+```{r, results='asis'}
+for(j in 1:length(state_occupancy_by_porsch$x)){
+  cat("\n\n### ", LETTERS[j], ": ", as.character(state_occupancy_by_porsch$porsch[j]), "\n\n")
+  print(state_occupancy_by_porsch$x[[j]])
+}
+```
+
+## Figure 4: Transition probabilities by organ failure or death {.tabset}
+
+```{r, results='asis'}
+for(j in 1:length(state_occupancy_by_organfailure$x)){
+  cat("\n\n### ", LETTERS[j], ": ", as.character(state_occupancy_by_organfailure$OFD[j]), "\n\n")
+  print(state_occupancy_by_organfailure$x[[j]])
+}
+```
+
