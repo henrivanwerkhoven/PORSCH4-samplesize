@@ -8,7 +8,7 @@ source("scripts/init.R")
 source("scripts/analysis.descriptive.R")
 source("scripts/analysis.model.fitting.R")
 source("scripts/analysis.model.output.R")
-
+# define scenarios
 source("scripts/analysis.scenarios.R")
 # # run simulations (very time consuming)
 # source("scripts/analysis.simulate.singlelarge.R")
