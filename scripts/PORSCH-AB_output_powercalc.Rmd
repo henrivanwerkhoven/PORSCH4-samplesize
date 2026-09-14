@@ -9,15 +9,11 @@ output: html_document
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## file used
-
-`r filename %>% str_remove("^data/")`, tab: `r tabname`.
-
 ## Original data
 
 Duration of (ICU) admission and mortality were analysed from `r data_outcome_ab_drainage$id %>% unique() %>% length()` patients with acute pancreatitis that received antibiotics or underwent drainage (ab_drainage population). 
 
-The patients trajectory was analysed from day 0 up to day `r futime-1` (i.e. `r futime` days). Figure 1 shows the crude trajectory of patients. In the crude data, `r mort_crude_ab_drainage %>% filter(day==futime-1) %>% pull(N.died)` (`r sprintf("%.1f%%", (mort_crude_ab_drainage %>% filter(day==futime-1) %>% pull(Prop.died))*100)`) patients died up to day `r futime`. ICU admissions occurred in `r icu_crude_ab_drainage$N.icu.anytime` (`r sprintf("%.1f%%",icu_crude_ab_drainage$Prop.icu.anytime*100)`) patients. In these ICU-admitted patients, the mean length of ICU stay was `r sprintf("%.1f", icu_crude_ab_drainage$Mean.icu.days)` days (overall mean: `r sprintf("%.1f", icu_crude_ab_drainage$Mean.icu.days.overall)` days). Over the follow-up time, patients spend on average `r sprintf("%.1f",days_alive_crude$mean_days_home)` days alive out of the hospital. There were `r readmission_crude_ab_drainage$N.readmissions` readmissions (population mean: `r readmission_crude_ab_drainage$Mean.readmissions %>% sprintf(fmt="%.3f")`).
+The patients trajectory was analysed from day 0 up to day `r futime-1` (i.e. `r futime` days). Figure 1 shows the crude trajectory of patients. In the crude data, `r mort_crude_ab_drainage %>% pull(N.died)` (`r sprintf("%.1f%%", (mort_crude_ab_drainage %>% pull(Prop.died))*100)`) patients died up to day `r futime`. A total of `r icu_crude_ab_drainage$N.icu.new` new ICU admissions occurred. The overall mean length of ICU stay was `r sprintf("%.1f", icu_crude_ab_drainage$Mean.icu.days.overall)` days. Over the follow-up time, patients spend on average `r sprintf("%.1f",days_alive_crude$mean_days_home)` days alive out of the hospital. There were `r readmission_crude_ab_drainage$N.readmissions` readmissions (population mean: `r readmission_crude_ab_drainage$Mean.readmissions %>% sprintf(fmt="%.3f")`).
 
 ## Modelling
 
@@ -75,19 +71,9 @@ The simulated trials were analysed in two ways. First, we used the "number of da
 plot_power_scenarios_ab_drainage
 ```
 
-<!-- ### Table 2: power (data underlying in figure 4) and effective sample size for trials with different sample size and effect size and using different endpoints, for an individually randomized trial. ESS: effective sample size. ARD: absolute risk difference -->
-
-```{r table_power}
-# table_power_scenarios %>%
-#   arrange(Effect, `N per group`) %>%
-#   mutate(grp = sprintf("%s (N per group: %.0f)", Effect, `N per group`)) %>%
-#   select(-Effect, -`N per group`) %>%
-#   gt(groupname_col = 'grp')
-```
-
 ## Sample sizes for the stepped-wedge trial
 
-The sample sizes provided for the simulations were back-calculated from a stepped-wedge trial with several fixed sample sizes. Sample sizes for the longitudinal ordinal outcome given this stepped-wedge trial design are provided in table 3.
+The sample sizes provided for the simulations were back-calculated from a stepped-wedge trial with several fixed sample sizes. Sample sizes for the longitudinal ordinal outcome given this stepped-wedge trial design are provided in table 2.
 
 **_Note that a wash-in period has not been accounted for._** Introducing a wash-in will result in a somewhat reduced power, although with 4 weeks wash-in and steps of 8-10 weeks the impact will be quite limited.
 
